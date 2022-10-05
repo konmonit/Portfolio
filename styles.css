@@ -1,0 +1,290 @@
+/* 
+*Set up global var
+*/
+
+:root {
+  --mainColor: #01030c;
+  --secondColor: #4e6499;
+  --asideBackground: #f2f3f7;
+  --activeColor: #97d2ec;
+  --fontSize: 16px;
+}
+
+/* 
+*Set up global setting
+*/
+
+* {
+  font-family: "Readex Pro", sans-serif;
+  /*we use it in order not to make the layout expand further, it will overwrite the layout itself even if we add border or padding*/
+  box-sizing: border-box;
+  line-height: 1.5em;
+}
+
+html {
+  font-size: var(--fontSize);
+}
+
+body {
+  margin: 0;
+}
+
+.header1 {
+  text-transform: uppercase;
+}
+
+[data-header] {
+  letter-spacing: 5px;
+  margin-bottom: 12px;
+}
+
+[data-header]::before {
+  font-size: 10px;
+  content: attr(data-header);
+  display: block;
+}
+
+/* 
+* Component
+*/
+.btn {
+  border: none;
+  font-size: 16px;
+  font-family: "Quicksand";
+}
+
+.btn:hover {
+  background-color: var(--secondColor);
+}
+
+.btn:active {
+  background-color: var(--activeColor);
+}
+
+/* 
+*Side Bar
+*/
+
+aside {
+  position: fixed;
+  top: 0;
+  background-color: var(--asideBackground);
+  width: 30%;
+  height: 100vh;
+  text-align: center;
+}
+
+aside > img {
+  width: auto;
+  height: 15vh;
+  border-radius: 50%;
+}
+
+#nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+
+#nav > a {
+  font-family: "Quicksand";
+  font-size: 14px;
+}
+
+ul {
+  /* Remove dot sign from unorder list */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--mainColor);
+  text-transform: uppercase;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--secondColor);
+  border-width: auto;
+}
+
+/* Social media icon */
+/* #menu:hover {
+  border-bottom: 2px solid var(--secondColor);
+  border-width: auto;
+} */
+
+.menu:active {
+  color: var(--secondColor);
+}
+
+.menu {
+  color: #85858d;
+  /* background-color: red; */
+}
+
+/* 
+*Content
+*/
+
+main {
+  padding-left: 32%;
+}
+
+main > section {
+  margin: 30px 0;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+}
+/*
+  Experience///////////////////////////////////////////////////////////////
+  */
+
+#experience {
+  display: flex;
+  flex-direction: column;
+}
+#experience > div {
+  background-color: #f2f3f7;
+  width: 50%;
+  margin: 10px 0;
+  text-align: center;
+  line-height: 75px;
+  border-bottom: 3px solid #2fa499;
+  box-shadow: 1px 1px 5px #2FA499;
+  transition: 0.5s;
+}
+
+#experience > div:hover {
+  box-shadow: 2px 3px 5px blue;
+}
+/* 
+  Education
+  ///////////////////////////////////////////////////////////////*/
+.date {
+  font-family: "Quicksand", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #337ab7;
+  margin-bottom: 0;
+}
+
+section > div > h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000000;
+  margin-top: 0;
+}
+
+.gpa {
+  margin: 0;
+}
+
+.edu {
+  padding-left: 25px;
+}
+
+/* Skill ///////////////////////////////////////////////////////////////
+  */
+
+.skills {
+  text-align: right;
+}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+  height: 6px;
+  border-radius: 8px;
+}
+
+.cpp {
+  background-color: #ec5453;
+  width: 80%;
+  height: 6px;
+  border-radius: 8px;
+}
+
+.cpp::before {
+  position: relative;
+  content: attr(vari);
+  color: #ec5453;
+  top: -25px;
+  font-size: 12px;
+}
+
+.html {
+  background-color: rgb(249, 191, 63);
+  width: 50%;
+  height: 6px;
+  border-radius: 8px;
+}
+
+.html::before {
+  position: relative;
+  content: attr(vari);
+  color: rgb(249, 191, 63);
+  top: -25px;
+  font-size: 12px;
+}
+
+.py {
+  background-color: #2c98f0;
+  width: 50%;
+  height: 6px;
+  border-radius: 8px;
+}
+
+.py::before {
+  position: relative;
+  content: attr(vari);
+  color: #2c98f0;
+  top: -25px;
+  font-size: 12px;
+}
+
+.wp {
+  background-color: rgb(47, 164, 153);
+  width: 50%;
+  height: 6px;
+  border-radius: 8px;
+}
+
+.wp::before {
+  position: relative;
+  content: attr(vari);
+  color: rgb(47, 164, 153);
+  top: -25px;
+  font-size: 12px;
+}
+
+.sql {
+  background-color: rgb(168,76,184);
+  width: 70%;
+  height: 6px;
+  border-radius: 8px;
+}
+
+.sql::before {
+  position: relative;
+  content: attr(vari);
+  color: rgb(168,76,184);
+  top: -25px;
+  font-size: 12px;
+}
+
+/* Interest */
+section > p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
